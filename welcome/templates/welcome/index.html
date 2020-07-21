@@ -306,6 +306,9 @@ Server hostname: {{ hostname }}
 Database server: {{ database.engine }} ({{ database.url }})
 {% if database.is_sqlite %}<span class="warning">Data persistence warning: You are currently using SQLite. This is fine for development, but your data won't be persisted across application deployments.</span>{% endif %}
 Page views: {{ count }}
+X-Email: {{ request.META.HTTP_X_EMAIL }}
+X-Access-Token: {{ request.META.HTTP_X_ACCESS_TOKEN }}
+
 Headers: {{ request.META }}
 </pre>
 
